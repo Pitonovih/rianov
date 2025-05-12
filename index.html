@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>ЧС биологического характера введено в 12 регионах | РИА Новости</title>
+    <meta name="description" content="Минздрав РФ объявил о введении режима ЧС из-за нового штамма вируса HNV-2025. Актуальная информация на 12 мая 2025 года.">
+    <link rel="icon" href="https://ria.ru/favicon.ico" type="image/x-icon">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'PT Sans', sans-serif;
+            color: #333;
+            line-height: 1.5;
+            background: #fff;
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+        .container {
+            max-width: 100%;
+            padding: 0 15px;
+        }
+        .header {
+            position: sticky;
+            top: 0;
+            background: #fff;
+            box-shadow: 0 1px 5px rgba(0,0,0,0.1);
+            z-index: 100;
+            padding: 12px 0;
+        }
+        .header-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .logo {
+            height: 24px;
+        }
+        .menu-btn {
+            width: 24px;
+            height: 24px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%230066cc"><path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/></svg>') no-repeat center;
+            border: none;
+        }
+        .datetime {
+            font-size: 13px;
+            color: #666;
+            margin-top: 8px;
+            text-align: center;
+        }
+        h1 {
+            font-size: 24px;
+            line-height: 1.3;
+            margin: 20px 0 15px;
+            font-weight: 700;
+        }
+        .article-meta {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .article-meta a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+        .content {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+        .content p {
+            margin-bottom: 20px;
+        }
+        .warning-banner {
+            background: #fff8e6;
+            border-left: 4px solid #ffc107;
+            padding: 16px;
+            margin: 25px 0;
+            border-radius: 0 4px 4px 0;
+        }
+        .warning-banner h3 {
+            color: #d32f2f;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .warning-banner p {
+            margin-bottom: 8px;
+        }
+        blockquote {
+            border-left: 3px solid #0066cc;
+            padding-left: 15px;
+            margin: 20px 0;
+            color: #555;
+        }
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .banner {
+            width: 100%;
+            margin: 25px 0;
+            background: #f5f5f5;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+        .banner img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        .related-news {
+            margin: 35px 0;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .related-news h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #0066cc;
+        }
+        .related-item {
+            margin-bottom: 15px;
+        }
+        .related-item a {
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            display: block;
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .comments {
+            margin: 35px 0;
+            border-top: 1px solid #eee;
+            padding-top: 20px;
+        }
+        .comments h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+        }
+        .comment {
+            margin-bottom: 20px;
+            padding: 15px;
+            background: #f9f9f9;
+            border-radius: 8px;
+        }
+        .comment-author {
+            font-weight: 600;
+            margin-bottom: 5px;
+            display: flex;
+            align-items: center;
+        }
+        .comment-author:before {
+            content: "";
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            background: #0066cc;
+            border-radius: 50%;
+            margin-right: 8px;
+        }
+        .comment-date {
+            font-size: 13px;
+            color: #666;
+            margin-bottom: 10px;
+        }
+        .footer {
+            background: #f5f5f5;
+            padding: 25px 15px;
+            margin-top: 30px;
+            font-size: 14px;
+        }
+        .footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .footer-links a {
+            color: #666;
+            text-decoration: none;
+        }
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .social-links a {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: #ddd;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .social-links img {
+            width: 20px;
+            height: 20px;
+        }
+        @media (min-width: 768px) {
+            .container {
+                max-width: 700px;
+                margin: 0 auto;
+            }
+            h1 {
+                font-size: 28px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/RIA_logo_%282016%29.svg" alt="РИА Новости" class="logo">
+                <button class="menu-btn" aria-label="Меню"></button>
+            </div>
+            <div class="datetime">12 мая 2025, 11:45 • Обновлено в 12:30</div>
+        </header>
+
+        <main>
+            <article>
+                <h1>Режим ЧС биологического характера введён в 12 регионах России</h1>
+                
+                <div class="article-meta">
+                    <span>Мария Семёнова</span>
+                    <span>Теги: <a href="#">Минздрав</a>, <a href="#">ЧС</a>, <a href="#">вирус</a></span>
+                </div>
+
+                <div class="content">
+                    <p><strong>Правительство РФ объявило о введении режима чрезвычайной ситуации федерального уровня из-за вспышки нового штамма нейротропного вируса HNV-2025.</strong> Под ограничения попали 12 регионов Центральной России.</p>
+
+                    <div class="warning-banner">
+                        <h3>Важно знать</h3>
+                        <p>• Ограничено перемещение между регионами<br>
+                        • Масочный режим в общественных местах<br>
+                        • Торговые центры работают до 20:00<br>
+                        • Школы переведены на дистант<br>
+                        • Горячая линия: 8-800-202-25-25</p>
+                    </div>
+
+                    <p>Министр здравоохранения Михаил Мурашко на экстренном брифинге сообщил:</p>
+                    
+                    <blockquote>"По состоянию на 12:00 зафиксировано 247 лабораторно подтверждённых случаев HNV-2025. Ситуация контролируется, все необходимые карантинные меры приняты. Спецкомиссия работает в круглосуточном режиме."</blockquote>
+
+                    <div class="banner">
+                        <img src="https://via.placeholder.com/320x100?text=Реклама+СберМаркет" alt="Реклама">
+                    </div>
+
+                    <p>В пострадавших регионах развёрнуты мобильные госпитали. Национальная гвардия приведена в состояние повышенной готовности.</p>
+
+                    <p>Пресс-секретарь президента Дмитрий Песков заявил:</p>
+
+                    <blockquote>"Финансирование противоэпидемических мероприятий увеличено втрое. Особое внимание уделяется поставкам лекарств и средств защиты."</blockquote>
+
+                    <p>Роспотребнадзор опубликовал основные симптомы HNV-2025:</p>
+                    <ul>
+                        <li>Температура выше 38°C</li>
+                        <li>Нарушения координации</li>
+                        <li>Нехарактерная агрессия</li>
+                        <li>Светобоязнь</li>
+                        <li>Повышенное слюноотделение</li>
+                    </ul>
+
+                    <div class="banner">
+                        <img src="https://via.placeholder.com/320x100?text=Реклама+Яндекс.Плюс" alt="Реклама">
+                    </div>
+                </div>
+            </article>
+
+            <div class="related-news">
+                <h3>Смотрите также</h3>
+                <div class="related-item">
+                    <a href="#">ВОЗ созывает экстренное заседание по ситуации в России</a>
+                </div>
+                <div class="related-item">
+                    <a href="#">Как будет работать транспорт в условиях ЧС</a>
+                </div>
+                <div class="related-item">
+                    <a href="#">Фармкомпании ускоряют разработку вакцины</a>
+                </div>
+                <div class="related-item">
+                    <a href="#">Психологи дали советы по поведению в карантине</a>
+                </div>
+            </div>
+
+            <div class="comments">
+                <h3>Комментарии <span style="color:#666">(247)</span></h3>
+                <div class="comment">
+                    <div class="comment-author">Иван Петров</div>
+                    <div class="comment-date">12 мая, 12:05</div>
+                    <p>В нашем районе уже видели машины скорой с охраной. Что-то серьёзное происходит.</p>
+                </div>
+                <div class="comment">
+                    <div class="comment-author">Елена Смирнова</div>
+                    <div class="comment-date">12 мая, 12:12</div>
+                    <p>Почему сразу паника? Власти всё контролируют, скоро всё нормализуется.</p>
+                </div>
+                <div class="comment">
+                    <div class="comment-author">Алексей К.</div>
+                    <div class="comment-date">12 мая, 12:18</div>
+                    <p>В аптеках уже нет масок и антисептиков. Цены взлетели в 5 раз!</p>
+                </div>
+            </div>
+        </main>
+
+        <footer class="footer">
+            <div class="footer-links">
+                <a href="#">О компании</a>
+                <a href="#">Контакты</a>
+                <a href="#">Реклама</a>
+                <a href="#">Вакансии</a>
+            </div>
+            <p>© 2025 РИА Новости<br>
+            Свидетельство о регистрации СМИ Эл № ФС77-57642</p>
+            <div class="social-links">
+                <a href="#"><img src="https://via.placeholder.com/20x20?text=VK" alt="VK"></a>
+                <a href="#"><img src="https://via.placeholder.com/20x20?text=TG" alt="Telegram"></a>
+                <a href="#"><img src="https://via.placeholder.com/20x20?text=OK" alt="OK"></a>
+            </div>
+        </footer>
+    </div>
+
+    <script>
+        // Анимация для улучшения пользовательского опыта
+        document.addEventListener('DOMContentLoaded', function() {
+            // Плавное появление контента
+            setTimeout(function() {
+                document.body.style.opacity = '1';
+            }, 100);
+            
+            // Имитация загрузки комментариев
+            const commentsSection = document.querySelector('.comments');
+            if (commentsSection) {
+                const observer = new IntersectionObserver((entries) => {
+                    if (entries[0].isIntersecting) {
+                        setTimeout(() => {
+                            commentsSection.style.opacity = '1';
+                            commentsSection.style.transform = 'translateY(0)';
+                        }, 300);
+                        observer.unobserve(commentsSection);
+                    }
+                }, { threshold: 0.1 });
+                
+                commentsSection.style.opacity = '0';
+                commentsSection.style.transform = 'translateY(20px)';
+                commentsSection.style.transition = 'all 0.3s ease-out';
+                observer.observe(commentsSection);
+            }
+        });
+        
+        // Обработка нажатия на меню
+        document.querySelector('.menu-btn').addEventListener('click', function() {
+            alert('Меню РИА Новости');
+        });
+    </script>
+</body>
+  </html>
